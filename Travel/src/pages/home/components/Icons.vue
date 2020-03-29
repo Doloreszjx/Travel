@@ -60,17 +60,17 @@ export default {
     padding-bottom: 33.3%
     .img-item
       position: absolute
-      top:0
-      left: 0
-      right:0
-      bottom:0
+      top:50%
+      left: 50%
+      transform: translate(-50%, -50%)
       box-sizing: border-box
       padding: .1rem
+      height: 100%
       .img-self
         display : block
         margin: 0 auto
-        height: 100%
-        font-size: 2.5rem
+        padding-top: .5rem
+        font-size: 2rem
     .describe
       font-size: .44rem
       position: absolute
@@ -79,7 +79,7 @@ export default {
       bottom: 0
       height: .44rem
       line-height : .44rem
-      margin-top: .2rem
+      padding-bottom: 2rem
       text-align : center
       color: $darkTextColor
 
