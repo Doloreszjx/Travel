@@ -50,7 +50,7 @@ export default {
   overflow: hidden
   height: 0
   width: 100%
-  padding-bottom: 50%
+  padding-bottom: 66.8%
   background-color : #eee
   .icon
     position: relative
@@ -70,16 +70,16 @@ export default {
         display : block
         margin: 0 auto
         padding-top: .5rem
-        font-size: 2rem
+        font-size: .85rem
     .describe
-      font-size: .44rem
+      font-size: .28rem
       position: absolute
       left: 0
       right:0
       bottom: 0
       height: .44rem
       line-height : .44rem
-      padding-bottom: 2rem
+      padding-bottom: .2rem
       text-align : center
       color: $darkTextColor
 
