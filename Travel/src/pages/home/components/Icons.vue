@@ -1,11 +1,15 @@
 <template>
   <div class="icons">
-    <div class="icon" v-for="item in iconList" :key="item.id">
-      <div class="img-item">
-        <div class="iconfont img-self">{{item.icon}}</div>
-      </div>
-      <p class="describe">{{item.describe}}</p>
-    </div>
+    <swiper>
+      <swiper-slide v-for="(page, index) in pages" :key="index">
+        <div class="icon" v-for="item in page" :key="item.id">
+          <div class="img-item">
+            <div class="iconfont img-self">{{item.icon}}</div>
+          </div>
+          <p class="describe">{{item.describe}}</p>
+        </div>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
@@ -40,18 +44,32 @@ export default {
         describe: '旅行游记'
       }]
     }
+  },
+  computed: {
+    pages () {
+      const pages = []
+      this.iconList.forEach((item, index) => {
+        const page = Math.floor(index / 8)
+        if (!pages[page]) {
+          pages[page] = []
+        }
+        pages[page].push(item)
+      })
+      return pages
+    }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
 @import '~style/varibles.styl'
+@import '~style/mixins.styl'
 .icons
   overflow: hidden
   height: 0
   width: 100%
   padding-bottom: 66.8%
-  background-color : #eee
+  /*background-color : #eee*/
   .icon
     position: relative
     float: left
@@ -82,5 +100,6 @@ export default {
       padding-bottom: .2rem
       text-align : center
       color: $darkTextColor
+      ellipsis()
 
 </style>

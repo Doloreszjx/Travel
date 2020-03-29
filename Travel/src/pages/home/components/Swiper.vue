@@ -35,8 +35,7 @@ export default {
   overflow : hidden
   width: 100%
   height: 0
-  padding-bottom: 16.7%
-  margin-bottom: .44rem
+  padding-bottom: 32.16%
   background-color : #eee
   img
     width: 100%
