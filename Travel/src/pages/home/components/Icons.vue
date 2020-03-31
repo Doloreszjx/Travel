@@ -1,12 +1,16 @@
 <template>
   <div class="icons">
-    <swiper>
-      <swiper-slide v-for="(page, index) in pages" :key="index">
-        <div class="icon" v-for="item in page" :key="item.id">
-          <div class="img-item">
-            <div class="iconfont img-self">{{item.icon}}</div>
+    <swiper :options="swiperOption">
+      <swiper-slide v-for="(page, index) of pages" :key="index">
+        <div
+          class="icon"
+          v-for="item of page"
+          :key="item.id"
+        >
+          <div class='icon-img'>
+            <img class='icon-img-content' :src='item.imgUrl' />
           </div>
-          <p class="describe">{{item.describe}}</p>
+          <p class="icon-desc">{{item.desc}}</p>
         </div>
       </swiper-slide>
     </swiper>
@@ -15,40 +19,21 @@
 
 <script>
 export default {
-  name: 'Icons',
-  data: function () {
+  name: 'HomeIcons',
+  props: {
+    list: Array
+  },
+  data () {
     return {
-      iconList: [{
-        id: '001',
-        icon: '\ue622',
-        describe: '国内机票'
-      }, {
-        id: '002',
-        icon: '\ue73f;',
-        describe: '酒店客栈'
-      }, {
-        id: '003',
-        icon: '\ue601;',
-        describe: '景区门票'
-      }, {
-        id: '004',
-        icon: '\ue67a;',
-        describe: '旅游度假'
-      }, {
-        id: '005',
-        icon: '\ue89b;;',
-        describe: '国际机票'
-      }, {
-        id: '006',
-        icon: '\ue61d;',
-        describe: '旅行游记'
-      }]
+      swiperOption: {
+        autoplay: false
+      }
     }
   },
   computed: {
     pages () {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
@@ -64,41 +49,38 @@ export default {
 <style lang="stylus" scoped>
 @import '~style/varibles.styl'
 @import '~style/mixins.styl'
-.icons
-  overflow: hidden
+.icons >>> .swiper-container
   height: 0
-  width: 100%
-  padding-bottom: 66.8%
-  /*background-color : #eee*/
+  padding-bottom: 50%
+.icons
+  margin-top: .1rem
   .icon
     position: relative
+    overflow: hidden
     float: left
+    width: 25%
     height: 0
-    width: 33.3%
-    padding-bottom: 33.3%
-    .img-item
+    padding-bottom: 25%
+    .icon-img
       position: absolute
-      top:50%
-      left: 50%
-      transform: translate(-50%, -50%)
+      top: 0
+      left: 0
+      right: 0
+      bottom: .44rem
       box-sizing: border-box
       padding: .1rem
-      height: 100%
-      .img-self
-        display : block
+      .icon-img-content
+        display: block
         margin: 0 auto
-        padding-top: .5rem
-        font-size: .85rem
-    .describe
-      font-size: .28rem
+        height: 100%
+    .icon-desc
       position: absolute
       left: 0
-      right:0
+      right: 0
       bottom: 0
       height: .44rem
-      line-height : .44rem
-      padding-bottom: .2rem
-      text-align : center
+      line-height: .44rem
+      text-align: center
       color: $darkTextColor
       ellipsis()
 </style>

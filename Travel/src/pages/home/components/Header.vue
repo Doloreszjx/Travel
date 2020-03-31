@@ -6,7 +6,7 @@
       <div class="iconfont icon-mag">&#xe848;</div>
       <input class="header-middle" type="text" placeholder="please search your interests" name="input" id="input">
       <div class="header-right">
-        城市
+        {{this.city}}
         <span class="iconfont">&#xe60b;</span>
       </div>
     </div>
@@ -14,7 +14,10 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  props: {
+    city: String
+  }
 }
 </script>
 
