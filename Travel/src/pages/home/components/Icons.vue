@@ -1,11 +1,15 @@
 <template>
   <div class="icons">
-    <div class="icon" v-for="item in iconList" :key="item.id">
-      <div class="img-item">
-        <div class="iconfont img-self">{{item.icon}}</div>
-      </div>
-      <p class="describe">{{item.describe}}</p>
-    </div>
+    <swiper>
+      <swiper-slide v-for="(page, index) in pages" :key="index">
+        <div class="icon" v-for="item in page" :key="item.id">
+          <div class="img-item">
+            <div class="iconfont img-self">{{item.icon}}</div>
+          </div>
+          <p class="describe">{{item.describe}}</p>
+        </div>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
@@ -40,18 +44,32 @@ export default {
         describe: '旅行游记'
       }]
     }
+  },
+  computed: {
+    pages () {
+      const pages = []
+      this.iconList.forEach((item, index) => {
+        const page = Math.floor(index / 8)
+        if (!pages[page]) {
+          pages[page] = []
+        }
+        pages[page].push(item)
+      })
+      return pages
+    }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
 @import '~style/varibles.styl'
+@import '~style/mixins.styl'
 .icons
   overflow: hidden
   height: 0
   width: 100%
-  padding-bottom: 50%
-  background-color : #eee
+  padding-bottom: 66.8%
+  /*background-color : #eee*/
   .icon
     position: relative
     float: left
@@ -60,27 +78,27 @@ export default {
     padding-bottom: 33.3%
     .img-item
       position: absolute
-      top:0
-      left: 0
-      right:0
-      bottom:0
+      top:50%
+      left: 50%
+      transform: translate(-50%, -50%)
       box-sizing: border-box
       padding: .1rem
+      height: 100%
       .img-self
         display : block
         margin: 0 auto
-        height: 100%
-        font-size: 2.5rem
+        padding-top: .5rem
+        font-size: .85rem
     .describe
-      font-size: .44rem
+      font-size: .28rem
       position: absolute
       left: 0
       right:0
       bottom: 0
       height: .44rem
       line-height : .44rem
-      margin-top: .2rem
+      padding-bottom: .2rem
       text-align : center
       color: $darkTextColor
-
+      ellipsis()
 </style>

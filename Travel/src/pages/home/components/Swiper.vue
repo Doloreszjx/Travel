@@ -35,10 +35,9 @@ export default {
   overflow : hidden
   width: 100%
   height: 0
-  padding-bottom: 16.7%
+  padding-bottom: 21.3%
   background-color : #eee
   img
     width: 100%
     height: 3.2rem
-
 </style>
