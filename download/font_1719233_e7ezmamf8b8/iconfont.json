@@ -1,0 +1,93 @@
+{
+  "id": "1719233",
+  "name": "Travel",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "vue.js + webpack",
+  "glyphs": [
+    {
+      "icon_id": "4933447",
+      "name": "赞",
+      "font_class": "zan",
+      "unicode": "e76c",
+      "unicode_decimal": 59244
+    },
+    {
+      "icon_id": "6031155",
+      "name": "icon－1_shou cang－xia",
+      "font_class": "icon_shoucangxia",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "6539418",
+      "name": "分享",
+      "font_class": "fenxiang",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
+      "icon_id": "2076295",
+      "name": " 国际机票",
+      "font_class": "guojijipiao",
+      "unicode": "e89b",
+      "unicode_decimal": 59547
+    },
+    {
+      "icon_id": "3765317",
+      "name": "地球仪",
+      "font_class": "-",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "3887020",
+      "name": "日记本 diary",
+      "font_class": "miao",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "7478256",
+      "name": "酒店",
+      "font_class": "jiudian",
+      "unicode": "e73f",
+      "unicode_decimal": 59199
+    },
+    {
+      "icon_id": "7519255",
+      "name": "旅游业",
+      "font_class": "lvyouye",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
+      "icon_id": "13241905",
+      "name": "飞机",
+      "font_class": "feiji",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "566774",
+      "name": "左箭头",
+      "font_class": "zuojiantou",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "1110411",
+      "name": "下箭头",
+      "font_class": "jiantou9",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "8288837",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e848",
+      "unicode_decimal": 59464
+    }
+  ]
+}
