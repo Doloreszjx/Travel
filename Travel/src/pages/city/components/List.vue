@@ -1,62 +1,68 @@
 <template>
-    <div class="list">
-      <div class="area">
-        <div class="title border-topBottom">您的位置</div>
-        <div class="button-list">
-          <div class="button-wrapper">
-            <div class="button">北京</div>
+    <div class="list" ref="wrapper">
+      <div>
+        <div class="area">
+          <div class="title border-topBottom">您的位置</div>
+          <div class="button-list">
+            <div class="button-wrapper">
+              <div class="button">北京</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="area">
-        <div class="title border-topBottom">热门城市</div>
-        <div class="button-list">
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
+        <div class="area">
+          <div class="title border-topBottom">热门城市</div>
+          <div class="button-list">
+            <div class="button-wrapper">
+              <div class="button">北京</div>
+            </div>
+            <div class="button-wrapper">
+              <div class="button">北京</div>
+            </div>
+            <div class="button-wrapper">
+              <div class="button">北京</div>
+            </div>
+            <div class="button-wrapper">
+              <div class="button">北京</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="area">
-        <div class="title border-topBottom">A</div>
-        <ul class="item-list">
-          <li class="item border-bottom">阿拉尔</li>
-          <li class="item border-bottom">阿拉尔</li>
-          <li class="item border-bottom">阿拉尔</li>
-          <li class="item border-bottom">阿拉尔</li>
-          <li class="item border-bottom">阿拉尔</li>
-        </ul>
-        <div class="title border-topBottom">A</div>
-        <ul class="item-list">
-          <li class="item border-bottom">阿拉尔</li>
-          <li class="item border-bottom">阿拉尔</li>
-          <li class="item border-bottom">阿拉尔</li>
-          <li class="item border-bottom">阿拉尔</li>
-          <li class="item border-bottom">阿拉尔</li>
-        </ul>
-        <div class="title border-topBottom">A</div>
-        <ul class="item-list">
-          <li class="item border-bottom">阿拉尔</li>
-          <li class="item border-bottom">阿拉尔</li>
-          <li class="item border-bottom">阿拉尔</li>
-          <li class="item border-bottom">阿拉尔</li>
-          <li class="item border-bottom">阿拉尔</li>
-        </ul>
+        <div class="area">
+          <div class="title border-topBottom">A</div>
+          <ul class="item-list">
+            <li class="item border-bottom">阿拉尔</li>
+            <li class="item border-bottom">阿拉尔</li>
+            <li class="item border-bottom">阿拉尔</li>
+            <li class="item border-bottom">阿拉尔</li>
+            <li class="item border-bottom">阿拉尔</li>
+          </ul>
+          <div class="title border-topBottom">A</div>
+          <ul class="item-list">
+            <li class="item border-bottom">阿拉尔</li>
+            <li class="item border-bottom">阿拉尔</li>
+            <li class="item border-bottom">阿拉尔</li>
+            <li class="item border-bottom">阿拉尔</li>
+            <li class="item border-bottom">阿拉尔</li>
+          </ul>
+          <div class="title border-topBottom">A</div>
+          <ul class="item-list">
+            <li class="item border-bottom">阿拉尔</li>
+            <li class="item border-bottom">阿拉尔</li>
+            <li class="item border-bottom">阿拉尔</li>
+            <li class="item border-bottom">阿拉尔</li>
+            <li class="item border-bottom">阿拉尔</li>
+          </ul>
+        </div>
       </div>
     </div>
 </template>
 
 <script>
+import Bscroll from 'better-scroll'
 export default {
-  name: 'List'
+  name: 'List',
+  mounted () {
+    this.scroll = new Bscroll(this.$refs.wrapper)
+  }
 }
 </script>
 
