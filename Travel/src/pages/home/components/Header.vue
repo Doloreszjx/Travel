@@ -7,7 +7,7 @@
       <input class="header-middle" type="text" placeholder="please search your interests" name="input" id="input">
       <router-link to="/city">
         <div class="header-right">
-          {{this.$store.state.city}}
+          {{this.city}}
           <span class="iconfont">&#xe60b;</span>
         </div>
       </router-link>
@@ -15,8 +15,12 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
-  name: 'Header'
+  name: 'Header',
+  computed: {
+    ...mapState(['city'])
+  }
 }
 </script>
 
@@ -52,7 +56,8 @@ export default {
     background-color: #ffffff
     border-radius: .1rem
   .header-right
-    width: 1.24rem
+    min-width: 1.04rem
+    padding: 0 .1rem
     float: right
     line-height: $headerHeight
     text-align :center
