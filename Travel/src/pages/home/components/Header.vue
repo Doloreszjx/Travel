@@ -7,7 +7,7 @@
       <input class="header-middle" type="text" placeholder="please search your interests" name="input" id="input">
       <router-link to="/city">
         <div class="header-right">
-          {{this.city}}
+          {{this.$store.state.city}}
           <span class="iconfont">&#xe60b;</span>
         </div>
       </router-link>
@@ -16,10 +16,7 @@
 
 <script>
 export default {
-  name: 'Header',
-  props: {
-    city: String
-  }
+  name: 'Header'
 }
 </script>
 
