@@ -25,22 +25,20 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.item
-  background-color: pink
-  .item-title
-    line-height: .8rem
-    font-size: .32rem
-    padding: 0 .2rem
-    .item-title-icon
-      position: relative
-      display: inline-block
-      left: .6rem
-      top: .6rem
-      width: .32rem
-      height: .32rem
-      margin-right: .1rem
-      background: url(http://s.qunarzz.com/piao/image/touch/sight/detail.png) 0 -.45rem no-repeat
-      background-size: .3rem .4rem
-  .item-chilren
-    padding: 0 .2rem
+.item-title
+  line-height: .8rem
+  font-size: .32rem
+  padding: 0 .2rem
+  .item-title-icon
+    position: relative
+    display: inline-block
+    left: .6rem
+    top: .6rem
+    width: .32rem
+    height: .32rem
+    margin-right: .1rem
+    background: url(http://s.qunarzz.com/piao/image/touch/sight/detail.png) 0 -.45rem no-repeat
+    background-size: .3rem .4rem
+.item-chilren
+  padding: 0 .2rem
 </style>
