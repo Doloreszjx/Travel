@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import CommonGallary from '../../../../src/common/gallary/Gallary'
-import FadeAnimation from '../../../../src/common/fadeAnimation/fadeAnimation'
+import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fadeAnimation/fadeAnimation'
 
 export default {
   name: 'DetailBanner',
